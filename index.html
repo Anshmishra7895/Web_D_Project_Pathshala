@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 4</title>
+</head>
+
+<style>
+body{
+    font-family:  -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    overflow-x: hidden;
+}
+*::selection{
+    background-color: rgb(245, 104, 104);
+    color:rgb(77, 76, 76) ;
+}
+html::-webkit-scrollbar{
+    width: 15px;
+}
+html::-webkit-scrollbar-track{
+    background: black;
+}
+html::-webkit-scrollbar-thumb{
+    background: rgb(245, 104, 104);
+}
+.nav{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-top: 15px;
+    box-shadow: 2px 3px 10px black ;
+    background-color: rgb(245, 104, 104);
+}
+.logo{
+    font-size: 30px;
+    /* margin-bottom: 500px; */
+    line-height: 0px;
+    margin-top: -20px;
+    margin-left: 10px;
+    /* border: 3px solid red; */
+    /* margin-left: 10px; */
+}
+.menu{
+    text-align: right;
+    margin-right: 20px;
+}
+.menu a{
+    text-decoration: none;
+    /* border: 3px solid green; */
+    font-size: 20px;
+    padding: 15px;
+    font-weight: 600;
+    color: black;
+}
+.menu a:hover{
+    background-color: rgb(245, 104, 104);
+    color: white;
+    /* text-decoration: underline; */
+}
+.homerow{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.home-left-col{
+    flex-basis: 50%;
+    margin-top: 9vh;
+    margin-left: 12vh;
+    /* display: flex; */
+    /* border: 3px solid red; */
+}
+.home-left-col img{
+    width: 70vh;
+    height: 70vh;
+}
+.home-right-col{
+    flex-basis: 40%;
+    /* border: 3px solid red; */
+    margin-right: 50px;
+    margin-top: 10vh;
+    /* display: flex; */
+}
+.home-right-col h2{
+    font-size: 7.5vh;
+    font-weight: 640;
+}
+.home-right-col p{
+    font-size: 2.9vh;
+    color: black;
+}
+@keyframes changefontsize{
+0% {
+    font-size: 11vh;
+}
+25%{
+    font-size: 7vh;
+}
+50%{
+    font-size: 13vh;
+}
+75%{
+    font-size: 7vh;
+}
+100%{
+    font-size: 11vh;
+}
+}
+#L{
+    animation-name: changefontsize;
+    /* background-color:rgb(41, 189, 248) ; */
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+}
+/* #about{
+    clip-path: circle(50.0% at 0 50%) black;
+    background-color:rgb(245, 104, 104) ;
+} */
+.about{
+    text-align: center;
+    /* border: 2px solid red; */
+    margin-top: 45px;
+}
+.about h2{
+    font-size: 40px;
+}
+.aboutrow{
+    display: flex;
+    justify-content: space-between;
+    /* border: 2px solid blue; */
+    margin-top: 100px;
+}
+.about-left-col{
+    flex-basis: 50%;
+    /* border: 2px solid red; */
+}
+.about-left-col h4{
+    font-size: 20px;
+    font-weight: 600;
+    padding-left: 60px;
+}
+.about-left-col p{
+    font-size: 16px;
+    padding-left: 60px;
+}
+.about-right-col{
+    /* border: 2px solid red; */
+    flex-basis: 50%;
+    margin-right: -20vh;
+    margin-top: -20px;
+}
+.about-right-col img{
+    height: 370px;
+    width: 370px;
+    padding-left: 15px;
+    padding-bottom: 20px;
+}   
+#facility{
+    background-color: rgb(245, 104, 104);
+    /* margin-bottom: 30px; */
+    padding-bottom: 30px;
+}
+.facility{
+    text-align: center;
+    font-size: 30px;
+}
+.frow{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    /* border: 2px solid red; */
+    margin-left: 120px;
+    margin-right: 120px;
+    margin-top: 50px;
+    /* margin-bottom: 100px; */
+    padding-top: 30px;
+    padding-bottom:30px;
+    background-color: white;
+    border-radius: 10px;
+}
+.fcol{
+    flex-basis: 30%;
+    display: flex;
+}
+.tree{
+    font-size: 40px;
+    /* border: 2px solid blue; */
+}
+.para{
+/* border: 2px solid green; */
+padding-top: 15px;
+}
+.review{
+    text-align: center;
+    /* border: 2px solid red; */
+    margin-top: 20px;
+    /* padding-top: 20px; */
+    font-size: 30px;
+}
+.rrow{
+    display: flex;
+    justify-content: space-around;
+    /* border: 2px solid green; */
+    padding-left: 70px;
+    padding-right: 70px;
+    /* padding: 80px; */
+    text-align: center;
+    flex-wrap: wrap;
+    /* padding-top: 10px; */
+}
+.rcol{
+    /* flex-basis: 80%; */
+    flex-basis: 30%;
+    /* padding-top: 10px; */
+    margin-top: 10px;
+    /* border: 2px solid blue; */
+    /* padding-left: 20px; */
+    box-shadow: 2px 0px 4px rgb(167, 167, 167);
+    border-radius: 10px;
+}
+.rcol p{
+    text-align: center;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.rcol b{
+    font-size: 20px;
+    /* margin-top: -20px; */
+}
+.client{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    padding-top: 20px;
+}
+.rating{
+    width: 100px;
+    /* height: 30px; */
+    /* border: 2px solid red; */
+    /* padding-bottom: 10px; */
+    margin-top: -15px;
+}
+#get{
+    background: url(childstudy.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: -30px;
+}
+.get{
+    text-align: center;
+    font-size: 30px;
+    color: rgb(245, 104, 104);
+    padding-top: 20px;
+    /* border: 2px solid red; */
+    margin-top: 50px;
+}
+form{
+    text-align: center;
+    padding: 10px;
+}
+form input{
+    width: 100vh;
+    padding: 10px;
+    border: 2px solid black;
+    margin-bottom: 10px;
+    border-radius: 10px 1px;
+    background-color: rgb(197, 197, 197);
+}
+form textarea{
+    border: 2px solid black;
+    margin-bottom: 10px;
+    border-radius: 10px 1px;
+    background-color:rgb(197, 197, 197);
+    /* font-size: 15px; */
+}
+form button{
+    border: 2px solid black;
+    border-radius: 40px ;
+    background-color: rgb(197, 197, 197);
+}
+::placeholder{
+    color: black;
+    /* font-size: 15px; */
+}
+.us{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    /* border: 2px solid red; */
+    padding-bottom: 50px;
+}
+#us{
+    /* background-color: black; */
+    /* margin-top: 20px; */
+    padding-top: 0px;
+    background-color: black;
+    color: white;
+}
+.usc{
+    flex-basis: 22%;
+    /* border: 2px solid blue; */
+    margin-left:50px ;
+    margin-right: 50px;
+    padding: 10px;
+}
+.usc h4{
+    font-size: 20px;
+    text-align: center;
+}
+.usc p{
+    text-align: center;
+}
+.usc img{
+    align-items: center;
+    /* padding: 7px; */
+    padding-left: 15px;
+    /* border: 2px solid red; */
+    margin-left: 10px;
+    cursor: pointer;
+}
+button{
+    cursor: pointer;
+}
+marquee{
+    background-color: rgb(245, 104, 104);
+    color: black;
+}
+
+</style>
+
+
+<section class="home" id="home">
+    
+    <nav class="nav">
+        <div class="logo">
+            <h3> <span style="color: white;">P</span>athshala</h3>
+        </div>
+        <div class="menu">
+            <a href="#home"> Home           </a>
+            <a href="#about"> About         </a>
+            <a href="#facility"> Facility  </a>
+            <a href="#review"> Review      </a>
+            <a href="#get"> Contact Us     </a>
+        </div>
+    </nav>
+    <!-- <marquee behavior="" direction="" class="m1">Visit and give us a Chance🙂</marquee> -->
+    <div class="homerow">
+        <div class="home-left-col">
+            <img src="teacherbg.png" alt="">
+        </div>
+        <div class="home-right-col">
+            <h2><span id="L" style="color: rgb(245, 104, 104); font-size: 11vh; font-weight: 650;">L</span>ets bring a revolution in Education </h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur dolore ut tenetur nostrum quia iste voluptatem! Molestiae recusandae, doloremque vitae perferendis iusto accusamus aperiam reiciendis sunt? Et repellat officiis cumque!</p>
+        </div>
+    </div>
+</section>
+
+<section id="about">
+    <div class="about">
+        <h2><span style="color:rgb(245, 104, 104);">A</span>bout</h2>
+    </div>
+    <div class="aboutrow">
+        <div class="about-left-col">
+            <h4>Who we are ?</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis earum maiores voluptate minus obcaecati laudantium illum dicta. Quod aliquid inventore sunt porro quaerat enim placeat atque debitis, maxime corporis molestias! Lorem ipsum dolor sit amet consectetur adipisicing elit. Volu</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis nulla fuga non ut quod voluptatem, numquam dolorem dicta aspernatur ullam porro eligendi, ab similique facilis vel, nisi in libero ipsam! Lorem ipsum, dolor sit amet consectetur Lorem ipsum dolor, sit amet consectetur </p>
+        </div>
+        <div class="about-right-col">
+            <img src="graduation hat.jpg" alt="">
+        </div>
+    </div>
+</section>
+
+<section id="facility">
+    <div class="facility">
+        <h2><span style="color: white;">F</span>acility </h2>
+    </div>
+    <div class="frow">
+        <div class="fcol">
+            <p class="tree">🌳</p>
+            <p class="para"><b style="font-size: 20px;">Proper Greenery</b> <br> Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+        </div>
+        <div class="fcol">
+            <p class="tree">💡</p>
+            <p class="para"><b style="font-size: 20px;">Proper Light</b> <br> Lorem ipsum dolor, sit amet consectetur adipisicing elit. </p>
+        </div>
+        <div class="fcol">
+            <p class="tree">🧯</p>
+            <p class="para"><b style="font-size: 20px;">Fire Extinguisher</b> <br> Lorem ipsum dolor, sit amet consectetur adipisicing elit. </p>
+        </div>
+        <div class="fcol">
+            <p class="tree">👨🏻‍✈️</p>
+            <p class="para"><b style="font-size: 20px;">Proper Security</b> <br> Lorem ipsum dolor, sit amet consectetur adipisicing elit. </p>
+        </div>
+        <div class="fcol">
+            <p class="tree">🏀</p>
+            <p class="para"><b style="font-size: 20px;">Sport Facility</b> <br> Lorem ipsum dolor, sit amet consectetur adipisicing elit. </p>
+        </div>
+        <div class="fcol">
+            <p class="tree">📚</p>
+            <p class="para"><b style="font-size: 20px;">Library</b> <br> Lorem ipsum dolor, sit amet consectetur adipisicing elit. </p>
+        </div>
+         <div class="fcol">
+            <p class="tree">💧</p>
+            <p class="para"><b style="font-size: 20px;">Clean Water</b><br> Lorem ipsum dolor, sit amet consectetur adipisicing elit. </p>
+        </div>
+        <div class="fcol">
+            <p class="tree">🚌</p>
+            <p class="para"><b style="font-size: 20px;">Transportation Facility</b><br> Lorem ipsum dolor, sit amet consectetur adipisicing elit. </p>
+        </div>
+        <div class="fcol">
+            <p class="tree">🙂</p>
+            <p class="para"><b style="font-size: 20px;">Happy Environment</b><br> Lorem ipsum dolor, sit amet consectetur adipisicing elit. </p>
+        </div>
+    </div>
+
+</section>
+
+<section id="review">
+    <div class="review">
+        <h2><span style="color: rgb(245, 104, 104);">R</span>eview</h2>
+    </div>
+        <div class="rrow">
+           <div class="rcol">
+               <img src="c1.jpg" alt="" class="client">
+               <p><b>John Deo</b></p>
+               <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reiciendis cupiditate, quia cum conasetur </p>
+               <img src="rating2.jpg" alt="" class="rating" >
+           </div>
+           <div class="rcol">
+                <img src="c2.jpg" alt="" class="client">
+                <p><b>John Deo</b></p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reiciendis cupiditate, quia cum conasetur </p>
+                <img src="rating2.jpg" alt="" class="rating">
+            </div>
+            <div class="rcol">
+                <img src="c3.jpg" alt="" class="client">
+                <p><b>John Deo</b></p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reiciendis cupiditate, quia cum conasetur </p>
+                <img src="rating2.jpg" alt="" class="rating" >
+            </div>
+            <div class="rcol">
+                <img src="c4.jpg" alt="" class="client">
+                <p><b>John Deo</b></p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reiciendis cupiditate, quia cum conasetur </p>
+                <img src="rating2.jpg" alt="" class="rating" >
+            </div>
+            <div class="rcol">
+                <img src="c5.jpg" alt="" class="client">
+                <p><b>John Deo</b></p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reiciendis cupiditate, quia cum conasetur </p>
+                <img src="rating2.jpg" alt="" class="rating" >
+            </div>
+            <div class="rcol">
+                <img src="c6.jpg" alt="" class="client">
+                <p><b>John Deo</b></p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reiciendis cupiditate, quia cum conasetur </p>
+                <img src="rating2.jpg" alt="" class="rating" >
+            </div>
+        </div>                                                                      
+</section>
+
+<section id="get">
+    <!-- <img src="childstudy.jpg" alt=""> -->
+    <div class="get">
+        <h2><span style="color: white;">C</span>ontact</h2>
+    </div>
+    <form action="">
+        <div class="cc">  <input type="Name" placeholder="First Name">   </div> 
+        <div class="cc">  <input type="Name" placeholder="Last Name">    </div>  
+        <div class="cc">  <input type="Name" placeholder="Email">        </div>  
+        <div class="cc">  <textarea name="" id="" cols="84" rows="10" placeholder="Write the message">   </textarea> </div> 
+        <button>Send <img src="telegram.png" alt="" width="20px">  
+        </button>
+
+    </form>
+</section>
+
+    <section id="us">
+        <div class="us">
+            <div class="usc">
+                <h4>   <span style="color:rgb(245, 104, 104) ;">P</span>athshala</h4>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eligendi esse illo animi ducimus voluptatem labore iste atque asperiores blanditiis quia, corporis, omnis repellat incidunt, ea doloremque eum! Eius, esse praesentium.</p>
+            </div>
+            <div class="usc">
+                <h4>  <span style="color:rgb(245, 104, 104) ;">C</span>ontact Us</h4>
+                <p>ansh2003mishra@gmail.com</p>
+                <p>7895484307</p>
+                <p>House No.1 Sahawar Gate Kasganj,India</p>
+                <img src="whatsapp.png" alt=""  width="20px">
+                <img src="twitter.png" alt=""  width="20px">
+                <img src="facebook.png" alt=""  width="20px">
+                <img src="youtube.png" alt=""  width="20px">
+                <img src="telegram (1).png" alt=""  width="20px">
+            </div>
+            <div class="usc">
+                <h4>  <span style="color:rgb(245, 104, 104) ;">A</span>bout Us</h4>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta corrupti repellat necessitatibus praesentium repudiandae! Eius aut voluptatibus odio error animi nemo incidunt? Facilis sed sit hic repellendus enim earum ratione.</p>
+            </div>
+        </div>    
+            <marquee behavior="" direction="" class="m2">Designed and Developed By Ansh Mishra | All Rights are Reserved ©®</marquee>
+    </section>
+
+
+</body>
+
+<script>
+    alret("Welcome");
+</script>
+
+</html>
